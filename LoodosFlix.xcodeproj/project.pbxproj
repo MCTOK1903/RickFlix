@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DA9264B2BA1002A375B /* AppDelegate.swift */; };
+		EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAB264B2BA1002A375B /* SceneDelegate.swift */; };
+		EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAD264B2BA1002A375B /* ViewController.swift */; };
+		EB748DB3264B2BA2002A375B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB748DB2264B2BA2002A375B /* Assets.xcassets */; };
+		EB748DB6264B2BA2002A375B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB748DB4264B2BA2002A375B /* LaunchScreen.storyboard */; };
+		EB748DC1264B2BA2002A375B /* LoodosFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DC0264B2BA2002A375B /* LoodosFlixTests.swift */; };
+		EB748DCC264B2BA2002A375B /* LoodosFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DCB264B2BA2002A375B /* LoodosFlixUITests.swift */; };
+		EB748DE1264B2FB2002A375B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */; };
+		EB748DE4264B3B8F002A375B /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DE3264B3B8F002A375B /* LaunchViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB748DBD264B2BA2002A375B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB748D9E264B2BA1002A375B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB748DA5264B2BA1002A375B;
+			remoteInfo = LoodosFlix;
+		};
+		EB748DC8264B2BA2002A375B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB748D9E264B2BA1002A375B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB748DA5264B2BA1002A375B;
+			remoteInfo = LoodosFlix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB748DA6264B2BA1002A375B /* LoodosFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB748DA9264B2BA1002A375B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB748DAB264B2BA1002A375B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EB748DAD264B2BA1002A375B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB748DB2264B2BA2002A375B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB748DB5264B2BA2002A375B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB748DB7264B2BA2002A375B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB748DBC264B2BA2002A375B /* LoodosFlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoodosFlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB748DC0264B2BA2002A375B /* LoodosFlixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoodosFlixTests.swift; sourceTree = "<group>"; };
+		EB748DC2264B2BA2002A375B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB748DC7264B2BA2002A375B /* LoodosFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoodosFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB748DCB264B2BA2002A375B /* LoodosFlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoodosFlixUITests.swift; sourceTree = "<group>"; };
+		EB748DCD264B2BA2002A375B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		EB748DE3264B3B8F002A375B /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB748DA3264B2BA1002A375B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DB9264B2BA2002A375B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DC4264B2BA2002A375B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB748D9D264B2BA1002A375B = {
+			isa = PBXGroup;
+			children = (
+				EB748DA8264B2BA1002A375B /* LoodosFlix */,
+				EB748DBF264B2BA2002A375B /* LoodosFlixTests */,
+				EB748DCA264B2BA2002A375B /* LoodosFlixUITests */,
+				EB748DA7264B2BA1002A375B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB748DA7264B2BA1002A375B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DA6264B2BA1002A375B /* LoodosFlix.app */,
+				EB748DBC264B2BA2002A375B /* LoodosFlixTests.xctest */,
+				EB748DC7264B2BA2002A375B /* LoodosFlixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB748DA8264B2BA1002A375B /* LoodosFlix */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DDE264B2C1C002A375B /* Resources */,
+				EB748DDD264B2C11002A375B /* Constant */,
+				EB748DDC264B2C07002A375B /* Extensions */,
+				EB748DDB264B2BC9002A375B /* Network */,
+				EB748DDA264B2BBB002A375B /* App */,
+				EB748DD9264B2BB0002A375B /* Screens */,
+				EB748DAD264B2BA1002A375B /* ViewController.swift */,
+			);
+			path = LoodosFlix;
+			sourceTree = "<group>";
+		};
+		EB748DBF264B2BA2002A375B /* LoodosFlixTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DC0264B2BA2002A375B /* LoodosFlixTests.swift */,
+				EB748DC2264B2BA2002A375B /* Info.plist */,
+			);
+			path = LoodosFlixTests;
+			sourceTree = "<group>";
+		};
+		EB748DCA264B2BA2002A375B /* LoodosFlixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DCB264B2BA2002A375B /* LoodosFlixUITests.swift */,
+				EB748DCD264B2BA2002A375B /* Info.plist */,
+			);
+			path = LoodosFlixUITests;
+			sourceTree = "<group>";
+		};
+		EB748DD9264B2BB0002A375B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DE2264B3B6E002A375B /* LaunchScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EB748DDA264B2BBB002A375B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DA9264B2BA1002A375B /* AppDelegate.swift */,
+				EB748DAB264B2BA1002A375B /* SceneDelegate.swift */,
+				EB748DB7264B2BA2002A375B /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EB748DDB264B2BC9002A375B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EB748DDC264B2C07002A375B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB748DDD264B2C11002A375B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		EB748DDE264B2C1C002A375B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DB2264B2BA2002A375B /* Assets.xcassets */,
+				EB748DB4264B2BA2002A375B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB748DE2264B3B6E002A375B /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DE3264B3B8F002A375B /* LaunchViewController.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB748DA5264B2BA1002A375B /* LoodosFlix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB748DD0264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlix" */;
+			buildPhases = (
+				EB748DA2264B2BA1002A375B /* Sources */,
+				EB748DA3264B2BA1002A375B /* Frameworks */,
+				EB748DA4264B2BA1002A375B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoodosFlix;
+			productName = LoodosFlix;
+			productReference = EB748DA6264B2BA1002A375B /* LoodosFlix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB748DBB264B2BA2002A375B /* LoodosFlixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB748DD3264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixTests" */;
+			buildPhases = (
+				EB748DB8264B2BA2002A375B /* Sources */,
+				EB748DB9264B2BA2002A375B /* Frameworks */,
+				EB748DBA264B2BA2002A375B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB748DBE264B2BA2002A375B /* PBXTargetDependency */,
+			);
+			name = LoodosFlixTests;
+			productName = LoodosFlixTests;
+			productReference = EB748DBC264B2BA2002A375B /* LoodosFlixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB748DC6264B2BA2002A375B /* LoodosFlixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB748DD6264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixUITests" */;
+			buildPhases = (
+				EB748DC3264B2BA2002A375B /* Sources */,
+				EB748DC4264B2BA2002A375B /* Frameworks */,
+				EB748DC5264B2BA2002A375B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB748DC9264B2BA2002A375B /* PBXTargetDependency */,
+			);
+			name = LoodosFlixUITests;
+			productName = LoodosFlixUITests;
+			productReference = EB748DC7264B2BA2002A375B /* LoodosFlixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB748D9E264B2BA1002A375B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					EB748DA5264B2BA1002A375B = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					EB748DBB264B2BA2002A375B = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = EB748DA5264B2BA1002A375B;
+					};
+					EB748DC6264B2BA2002A375B = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = EB748DA5264B2BA1002A375B;
+					};
+				};
+			};
+			buildConfigurationList = EB748DA1264B2BA1002A375B /* Build configuration list for PBXProject "LoodosFlix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB748D9D264B2BA1002A375B;
+			productRefGroup = EB748DA7264B2BA1002A375B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB748DA5264B2BA1002A375B /* LoodosFlix */,
+				EB748DBB264B2BA2002A375B /* LoodosFlixTests */,
+				EB748DC6264B2BA2002A375B /* LoodosFlixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB748DA4264B2BA1002A375B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB748DB6264B2BA2002A375B /* LaunchScreen.storyboard in Resources */,
+				EB748DB3264B2BA2002A375B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DBA264B2BA2002A375B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DC5264B2BA2002A375B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB748DA2264B2BA1002A375B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */,
+				EB748DE4264B3B8F002A375B /* LaunchViewController.swift in Sources */,
+				EB748DE1264B2FB2002A375B /* NetworkMonitor.swift in Sources */,
+				EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */,
+				EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DB8264B2BA2002A375B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB748DC1264B2BA2002A375B /* LoodosFlixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB748DC3264B2BA2002A375B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB748DCC264B2BA2002A375B /* LoodosFlixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB748DBE264B2BA2002A375B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB748DA5264B2BA1002A375B /* LoodosFlix */;
+			targetProxy = EB748DBD264B2BA2002A375B /* PBXContainerItemProxy */;
+		};
+		EB748DC9264B2BA2002A375B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB748DA5264B2BA1002A375B /* LoodosFlix */;
+			targetProxy = EB748DC8264B2BA2002A375B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB748DB4264B2BA2002A375B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB748DB5264B2BA2002A375B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB748DCE264B2BA2002A375B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB748DCF264B2BA2002A375B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB748DD1264B2BA2002A375B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlix/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB748DD2264B2BA2002A375B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlix/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB748DD4264B2BA2002A375B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlixTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoodosFlix.app/LoodosFlix";
+			};
+			name = Debug;
+		};
+		EB748DD5264B2BA2002A375B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlixTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoodosFlix.app/LoodosFlix";
+			};
+			name = Release;
+		};
+		EB748DD7264B2BA2002A375B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LoodosFlix;
+			};
+			name = Debug;
+		};
+		EB748DD8264B2BA2002A375B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PWZ728Y8S;
+				INFOPLIST_FILE = LoodosFlixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mct.LoodosFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LoodosFlix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB748DA1264B2BA1002A375B /* Build configuration list for PBXProject "LoodosFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB748DCE264B2BA2002A375B /* Debug */,
+				EB748DCF264B2BA2002A375B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB748DD0264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB748DD1264B2BA2002A375B /* Debug */,
+				EB748DD2264B2BA2002A375B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB748DD3264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB748DD4264B2BA2002A375B /* Debug */,
+				EB748DD5264B2BA2002A375B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB748DD6264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB748DD7264B2BA2002A375B /* Debug */,
+				EB748DD8264B2BA2002A375B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB748D9E264B2BA1002A375B /* Project object */;
+}
