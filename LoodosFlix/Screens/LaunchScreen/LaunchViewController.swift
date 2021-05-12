@@ -6,17 +6,23 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
 
 class LaunchViewController: UIViewController {
 
+    // MARK: View
+    
     let titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.text = "Loodos"
-        title.tintColor = .black
-        title.font = UIFont.boldSystemFont(ofSize: 15)
+        title.textColor = .systemBlue
+        title.font = UIFont.boldSystemFont(ofSize: 27)
         return title
     }()
+    
+    // MARK: Properties
+    
+    private let remoteConfig = RemoteConfig.remoteConfig()
     
     // MARK: LifeCycle
     
@@ -33,7 +39,7 @@ class LaunchViewController: UIViewController {
     }
 }
 
-// MARK: - public funcs
+// MARK: - Public funcs
 
 extension LaunchViewController {
     
@@ -47,22 +53,47 @@ extension LaunchViewController {
         titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
-        pushToMainVC()
+        getValueFromFirebase(withExpirationDuration: 0)
+        pushToMainVC(time: 4)
     }
     
     func showAlert() {
         let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) {
                 UIAlertAction in
-                NSLog("OK Pressed")
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true)
     }
     
-    func pushToMainVC() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.navigationController?.pushViewController(ViewController(), animated: true)
+    func pushToMainVC(time: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+            self.navigationController?.pushViewController(ViewController(), animated: false)
+        }
+    }
+    
+    func getValueFromFirebase(withExpirationDuration: TimeInterval) {
+        
+        let setting = RemoteConfigSettings()
+        setting.minimumFetchInterval = 0
+        remoteConfig.configSettings = setting
+        
+        self.remoteConfig.fetch(withExpirationDuration: withExpirationDuration) { status, error in
+            if status == .success, error == nil {
+                self.remoteConfig.activate { [weak self] isSucces, error in
+                    guard let self = self, error == nil else {
+                        return
+                    }
+                    
+                    if let value = self.remoteConfig.configValue(forKey: Constant.FirebaseConsant.REMOTE_CONFIG_KEY).stringValue {
+                        DispatchQueue.main.async {
+                            self.titleLabel.text = value
+                        }
+                    }
+                }
+            } else {
+                // OMG
+            }
         }
     }
 }
