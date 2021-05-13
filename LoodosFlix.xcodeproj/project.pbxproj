@@ -16,6 +16,8 @@
 		EB39B8BB264D40EA004E8D9C /* Codable+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BA264D40EA004E8D9C /* Codable+Alamofire.swift */; };
 		EB39B8BD264D4751004E8D9C /* MovieLisrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */; };
 		EB39B8C0264D4945004E8D9C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BF264D4945004E8D9C /* Services.swift */; };
+		EB39B8C2264D4F62004E8D9C /* MovieListCollectionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8C1264D4F62004E8D9C /* MovieListCollectionViewProvider.swift */; };
+		EB39B8C5264D52AB004E8D9C /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8C4264D52AB004E8D9C /* MovieListCollectionViewCell.swift */; };
 		EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DA9264B2BA1002A375B /* AppDelegate.swift */; };
 		EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAB264B2BA1002A375B /* SceneDelegate.swift */; };
 		EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAD264B2BA1002A375B /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 		EB39B8BA264D40EA004E8D9C /* Codable+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Alamofire.swift"; sourceTree = "<group>"; };
 		EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLisrViewModel.swift; sourceTree = "<group>"; };
 		EB39B8BF264D4945004E8D9C /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		EB39B8C1264D4F62004E8D9C /* MovieListCollectionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewProvider.swift; sourceTree = "<group>"; };
+		EB39B8C4264D52AB004E8D9C /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB748DA6264B2BA1002A375B /* LoodosFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB748DA9264B2BA1002A375B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB748DAB264B2BA1002A375B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EB39B8C3264D528C004E8D9C /* MovieListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EB39B8C4264D52AB004E8D9C /* MovieListCollectionViewCell.swift */,
+			);
+			path = MovieListCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		EB39B8C6264D600E004E8D9C /* MovieDetal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieDetal;
+			sourceTree = "<group>";
+		};
 		EB748D9D264B2BA1002A375B = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +229,7 @@
 		EB748DD9264B2BB0002A375B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EB39B8C6264D600E004E8D9C /* MovieDetal */,
 				EB748DEC264B5094002A375B /* MovieList */,
 				EB748DE2264B3B6E002A375B /* LaunchScreen */,
 			);
@@ -283,8 +303,10 @@
 		EB748DEC264B5094002A375B /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				EB39B8C3264D528C004E8D9C /* MovieListCollectionViewCell */,
 				EB748DED264B514D002A375B /* MovieListViewController.swift */,
 				EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */,
+				EB39B8C1264D4F62004E8D9C /* MovieListCollectionViewProvider.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -530,6 +552,7 @@
 				EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */,
 				EB39B8BD264D4751004E8D9C /* MovieLisrViewModel.swift in Sources */,
 				EB748DE4264B3B8F002A375B /* LaunchViewController.swift in Sources */,
+				EB39B8C2264D4F62004E8D9C /* MovieListCollectionViewProvider.swift in Sources */,
 				EB39B8C0264D4945004E8D9C /* Services.swift in Sources */,
 				EB39B8B9264D3F17004E8D9C /* ServiceManager.swift in Sources */,
 				EB39B8B5264D3CC6004E8D9C /* Movie.swift in Sources */,
@@ -539,6 +562,7 @@
 				EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */,
 				EB39B8B7264D3DA2004E8D9C /* MovieDetail.swift in Sources */,
 				EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */,
+				EB39B8C5264D52AB004E8D9C /* MovieListCollectionViewCell.swift in Sources */,
 				EB748DE9264B4C72002A375B /* Constant.swift in Sources */,
 				EB39B8BB264D40EA004E8D9C /* Codable+Alamofire.swift in Sources */,
 			);

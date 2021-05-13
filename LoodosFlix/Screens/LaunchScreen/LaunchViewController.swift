@@ -54,7 +54,7 @@ extension LaunchViewController {
         titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
         getValueFromFirebase(withExpirationDuration: 0)
-        pushToMainVC(time: 4)
+        pushToMainVC(time: 1)
     }
     
     func showAlert() {
@@ -68,7 +68,7 @@ extension LaunchViewController {
     
     func pushToMainVC(time: TimeInterval) {
         DispatchQueue.main.asyncAfter(deadline: .now() + time) {
-            self.navigationController?.pushViewController(ViewController(), animated: false)
+            self.navigationController?.pushViewController(MovieListViewController(), animated: false)
         }
     }
     

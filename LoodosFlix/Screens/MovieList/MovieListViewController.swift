@@ -12,7 +12,8 @@ class MovieListViewController: UIViewController {
     
     // MARK: Properties
     
-    private var viewModel: MovielistProtocol = MovieListViewModel(service: Services())
+    private let viewModel: MovielistProtocol = MovieListViewModel(service: Services())
+    private let movieListProvider: MovieListCollectionViewProvider = MovieListCollectionViewProvider()
     
     // MARK: View
     
@@ -26,27 +27,45 @@ class MovieListViewController: UIViewController {
         return searchBar
     }()
     
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        collectionView.register(MovieListCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        return collectionView
+    }()
     
+    // MARK: LifeCycle
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = movieListProvider
+        collectionView.dataSource = movieListProvider
+        
+        movieListProvider.delegate = self
         searchBar.delegate = self
         
         setUpUI()
     }
     
-    
     func setUpUI() {
         view.backgroundColor = .white
         
         view.addSubview(searchBar)
+        view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 8),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor,  constant: 8),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
         ])
     }
 }
@@ -56,11 +75,29 @@ extension MovieListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchKey = searchBar.text  {
             viewModel.searchMovie(movieName: searchKey) { [weak self] movie in
-                guard let self = self else { return }
-                print(movie)
+                guard let self = self, let movies = movie?.search else { return }
+                self.movieListProvider.update(movies: movies)
+                self.collectionView.reloadData()
             } onError: { error in
                 print(error)
             }
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        let movies: [Search] = []
+        self.movieListProvider.update(movies: movies)
+        self.collectionView.reloadData()
+    }
+}
+
+// MARK: - MovieListCollectionViewOutput
+extension MovieListViewController: MovieListCollectionViewOutput {
+    func getHight() -> CGFloat {
+        return view.bounds.height
+    }
+    
+    func onSelected(movie: Search) {
+        print(movie.imdbID)
     }
 }
