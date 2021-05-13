@@ -44,7 +44,7 @@ class LaunchViewController: UIViewController {
 extension LaunchViewController {
     
     func checkEthernetConnection() {
-        NetworkMonitor.shared.isConnected ? setUpIU() : showAlert()
+        NetworkMonitor.shared.isConnected ? setUpIU() : showAlert(message: "Connection failed.")
     }
     
     func setUpIU() {
@@ -54,11 +54,11 @@ extension LaunchViewController {
         titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
         getValueFromFirebase(withExpirationDuration: 0)
-        pushToMainVC(time: 1)
+        pushToMainVC(time: 3)
     }
     
-    func showAlert() {
-        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Title", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) {
                 UIAlertAction in
         }

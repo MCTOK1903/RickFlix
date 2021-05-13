@@ -9,6 +9,7 @@ import UIKit
 
 protocol MovieListCollectionViewProtocol {
     func update(movies: [Search])
+    func removeAllMovies()
 }
 protocol MovieListCollectionViewOutput: AnyObject {
     func onSelected(movieID: String)
@@ -20,8 +21,6 @@ final class MovieListCollectionViewProvider: NSObject {
     private lazy var movies: [Search] = []
     
     weak var delegate: MovieListCollectionViewOutput?
-    
-    var parentViewHeight: CGFloat = 0.0
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(movies.count)
@@ -54,5 +53,9 @@ extension MovieListCollectionViewProvider: UICollectionViewDelegate, UICollectio
 extension MovieListCollectionViewProvider: MovieListCollectionViewProtocol {
     func update(movies: [Search]) {
         self.movies = movies
+    }
+    
+    func removeAllMovies() {
+        self.movies.removeAll()
     }
 }

@@ -10,5 +10,8 @@ import Foundation
 extension Constant {
     class FirebaseConsant {
         static let REMOTE_CONFIG_KEY = "launch_view_title"
+        static let LOG_EVENT_NAME = "detail_screen_viewed"
+        static let SCREEN_NAME = "product_detail_view"
+        static let PRODUCT_NAME = "product_name"
     }
 }

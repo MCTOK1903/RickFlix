@@ -51,9 +51,9 @@ extension MovieListViewModel {
     }
     
     private func logDetailScreenEvent(movieTitle: String) {
-        FirebaseAnalytics.Analytics.logEvent("detail_screen_viewed", parameters: [
-            AnalyticsParameterScreenName: "product_detail_view",
-            "product_name": movieTitle,
+        FirebaseAnalytics.Analytics.logEvent(Constant.FirebaseConsant.LOG_EVENT_NAME, parameters: [
+            AnalyticsParameterScreenName: Constant.FirebaseConsant.LOG_EVENT_NAME,
+            Constant.FirebaseConsant.PRODUCT_NAME: movieTitle,
         ])
     }
 }

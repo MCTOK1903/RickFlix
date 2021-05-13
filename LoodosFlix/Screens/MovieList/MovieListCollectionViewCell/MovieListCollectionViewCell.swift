@@ -10,11 +10,15 @@ import Kingfisher
 
 class MovieListCollectionViewCell: UICollectionViewCell {
     
+    // MARK: Properties
+    
     var movie: Search? {
         didSet {
             configureCellContent()
         }
     }
+    
+    // MARK: View
     
     private let movieImage: UIImageView = {
         let iv = UIImageView()
@@ -57,6 +61,8 @@ class MovieListCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    // MARK: Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -65,6 +71,8 @@ class MovieListCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: LifeCycle
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -76,6 +84,7 @@ class MovieListCollectionViewCell: UICollectionViewCell {
         
         configureCell()
     }
+    // MARK: Funcs
     
     private func configureCell() {
         contentView.addSubview(movieImage)

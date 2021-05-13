@@ -15,14 +15,14 @@ class MovieDetailViewController: UIViewController {
     
     // MARK: View
     
-    let scrollView: UIScrollView = {
+    private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.isScrollEnabled = true
         return scrollView
     }()
     
-    let movieImage: UIImageView = {
+    private let movieImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleToFill
@@ -31,7 +31,7 @@ class MovieDetailViewController: UIViewController {
         return image
     }()
     
-    var movieNameLabel: UILabel = {
+    private var movieNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -42,7 +42,7 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var movieYearLabel: UILabel = {
+    private var movieYearLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -53,7 +53,7 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var movieReleasedLabel: UILabel = {
+    private var movieReleasedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -64,7 +64,7 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var ratedLabel: UILabel = {
+    private var ratedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -75,7 +75,7 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var awardsLabel: UILabel = {
+    private var awardsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -86,17 +86,7 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var directorLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.clipsToBounds = true
-        label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.numberOfLines = 0
-        label.backgroundColor = .white
-        return label
-    }()
-    var wtiterLabel: UILabel = {
+    private var directorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -107,7 +97,18 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
-    var actorsLabel: UILabel = {
+    private var wtiterLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.clipsToBounds = true
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.numberOfLines = 0
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    private var actorsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
@@ -222,5 +223,3 @@ class MovieDetailViewController: UIViewController {
         self.actorsLabel.text = "Actors: " + movie.actors
     }
 }
-
-

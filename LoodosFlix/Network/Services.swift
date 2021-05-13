@@ -17,7 +17,7 @@ protocol ServicesProtocol {
 final class Services: ServicesProtocol {
     
     func searchMovie(movieName: String, paramaters: [String: Any]?, data: Codable?, onSuccess: @escaping (Movie?) -> Void, onError: @escaping (AFError) -> Void) {
-        ServiceManager.shared.fetch(path: "http://www.omdbapi.com/?s=\(movieName)&apikey=cfd99f46", paramaters: nil, data: nil, method: HTTPMethod.get) { (response: Movie) in
+        ServiceManager.shared.fetch(path: Constant.NetworkConstant.BASE_URL + "/?s=\(movieName)&" + Constant.NetworkConstant.API_KEY, paramaters: nil, data: nil, method: HTTPMethod.get) { (response: Movie) in
             onSuccess(response)
             print(response)
         } onError: { error in
@@ -27,7 +27,7 @@ final class Services: ServicesProtocol {
     }
     
     func getMovieDetail(movieID: String, onSuccess: @escaping (MovieDetail?) -> Void, onError: @escaping (AFError) -> Void) {
-        ServiceManager.shared.fetch(path: "http://www.omdbapi.com/?i=\(movieID)&apikey=cfd99f46", paramaters: nil, data: nil, method: HTTPMethod.get) { (response: MovieDetail) in
+        ServiceManager.shared.fetch(path: Constant.NetworkConstant.BASE_URL + "/?i=\(movieID)&" + Constant.NetworkConstant.API_KEY , paramaters: nil, data: nil, method: HTTPMethod.get) { (response: MovieDetail) in
             onSuccess(response)
         } onError: { error in
             onError(error)
