@@ -11,6 +11,8 @@
 		68D91359D96B89B2268543A6 /* Pods_LoodosFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7803C8FD8139D5921244A0B8 /* Pods_LoodosFlix.framework */; };
 		BDEF38DE758E975D2C56EAC6 /* Pods_LoodosFlix_LoodosFlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D587E89D8192F8C4A79CE82B /* Pods_LoodosFlix_LoodosFlixUITests.framework */; };
 		EB13340F264D879800EC2883 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13340E264D879800EC2883 /* NetworkConstant.swift */; };
+		EB133412264DCE5F00EC2883 /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB133411264DCE5F00EC2883 /* NetworkTest.swift */; };
+		EB133415264DCF7600EC2883 /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = EB133414264DCF7600EC2883 /* movie.json */; };
 		EB39B8B5264D3CC6004E8D9C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B4264D3CC6004E8D9C /* Movie.swift */; };
 		EB39B8B7264D3DA2004E8D9C /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B6264D3DA2004E8D9C /* MovieDetail.swift */; };
 		EB39B8B9264D3F17004E8D9C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B8264D3F17004E8D9C /* ServiceManager.swift */; };
@@ -62,6 +64,8 @@
 		D3D2AF2CE7072141D7022E95 /* Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig"; path = "Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D587E89D8192F8C4A79CE82B /* Pods_LoodosFlix_LoodosFlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosFlix_LoodosFlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB13340E264D879800EC2883 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		EB133411264DCE5F00EC2883 /* NetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
+		EB133414264DCF7600EC2883 /* movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
 		EB39B8B4264D3CC6004E8D9C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EB39B8B6264D3DA2004E8D9C /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		EB39B8B8264D3F17004E8D9C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -150,6 +154,22 @@
 			path = NetworkConstant;
 			sourceTree = "<group>";
 		};
+		EB133410264DCE4800EC2883 /* NetworkTest */ = {
+			isa = PBXGroup;
+			children = (
+				EB133411264DCE5F00EC2883 /* NetworkTest.swift */,
+			);
+			name = NetworkTest;
+			sourceTree = "<group>";
+		};
+		EB133413264DCF4F00EC2883 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EB133414264DCF7600EC2883 /* movie.json */,
+			);
+			name = Mock;
+			sourceTree = "<group>";
+		};
 		EB39B8B2264D3BF1004E8D9C /* NetworkMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +241,8 @@
 		EB748DBF264B2BA2002A375B /* LoodosFlixTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB133413264DCF4F00EC2883 /* Mock */,
+				EB133410264DCE4800EC2883 /* NetworkTest */,
 				EB748DC0264B2BA2002A375B /* LoodosFlixTests.swift */,
 				EB748DC2264B2BA2002A375B /* Info.plist */,
 			);
@@ -440,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB133415264DCF7600EC2883 /* movie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB133412264DCE5F00EC2883 /* NetworkTest.swift in Sources */,
 				EB748DC1264B2BA2002A375B /* LoodosFlixTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
