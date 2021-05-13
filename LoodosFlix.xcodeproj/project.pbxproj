@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114C25C0A4A7D50D1E94772C /* Pods_LoodosFlixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7A660B950065FF6DF196B /* Pods_LoodosFlixTests.framework */; };
+		68D91359D96B89B2268543A6 /* Pods_LoodosFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7803C8FD8139D5921244A0B8 /* Pods_LoodosFlix.framework */; };
+		BDEF38DE758E975D2C56EAC6 /* Pods_LoodosFlix_LoodosFlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D587E89D8192F8C4A79CE82B /* Pods_LoodosFlix_LoodosFlixUITests.framework */; };
+		EB39B8B5264D3CC6004E8D9C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B4264D3CC6004E8D9C /* Movie.swift */; };
+		EB39B8B7264D3DA2004E8D9C /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B6264D3DA2004E8D9C /* MovieDetail.swift */; };
+		EB39B8B9264D3F17004E8D9C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8B8264D3F17004E8D9C /* ServiceManager.swift */; };
+		EB39B8BB264D40EA004E8D9C /* Codable+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BA264D40EA004E8D9C /* Codable+Alamofire.swift */; };
+		EB39B8BD264D4751004E8D9C /* MovieLisrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */; };
+		EB39B8C0264D4945004E8D9C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39B8BF264D4945004E8D9C /* Services.swift */; };
 		EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DA9264B2BA1002A375B /* AppDelegate.swift */; };
 		EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAB264B2BA1002A375B /* SceneDelegate.swift */; };
 		EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DAD264B2BA1002A375B /* ViewController.swift */; };
@@ -16,6 +25,10 @@
 		EB748DCC264B2BA2002A375B /* LoodosFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DCB264B2BA2002A375B /* LoodosFlixUITests.swift */; };
 		EB748DE1264B2FB2002A375B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */; };
 		EB748DE4264B3B8F002A375B /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DE3264B3B8F002A375B /* LaunchViewController.swift */; };
+		EB748DE6264B475F002A375B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB748DE5264B475F002A375B /* GoogleService-Info.plist */; };
+		EB748DE9264B4C72002A375B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DE8264B4C72002A375B /* Constant.swift */; };
+		EB748DEB264B4C9A002A375B /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DEA264B4C9A002A375B /* FirebaseConstant.swift */; };
+		EB748DEE264B514D002A375B /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB748DED264B514D002A375B /* MovieListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0492E6206EB580199E30FBF2 /* Pods-LoodosFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlix.release.xcconfig"; path = "Target Support Files/Pods-LoodosFlix/Pods-LoodosFlix.release.xcconfig"; sourceTree = "<group>"; };
+		47C7A660B950065FF6DF196B /* Pods_LoodosFlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosFlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		510ECE0D549DBCC6C8C6BECC /* Pods-LoodosFlixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlixTests.release.xcconfig"; path = "Target Support Files/Pods-LoodosFlixTests/Pods-LoodosFlixTests.release.xcconfig"; sourceTree = "<group>"; };
+		7803C8FD8139D5921244A0B8 /* Pods_LoodosFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8389ED79726A0F67D3C02724 /* Pods-LoodosFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlix.debug.xcconfig"; path = "Target Support Files/Pods-LoodosFlix/Pods-LoodosFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		A952EBEBAF6C171B7F30626D /* Pods-LoodosFlix-LoodosFlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlix-LoodosFlixUITests.debug.xcconfig"; path = "Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABCF57137B69FC9704AC3E5F /* Pods-LoodosFlixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlixTests.debug.xcconfig"; path = "Target Support Files/Pods-LoodosFlixTests/Pods-LoodosFlixTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3D2AF2CE7072141D7022E95 /* Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig"; path = "Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D587E89D8192F8C4A79CE82B /* Pods_LoodosFlix_LoodosFlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosFlix_LoodosFlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB39B8B4264D3CC6004E8D9C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EB39B8B6264D3DA2004E8D9C /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		EB39B8B8264D3F17004E8D9C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		EB39B8BA264D40EA004E8D9C /* Codable+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Alamofire.swift"; sourceTree = "<group>"; };
+		EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLisrViewModel.swift; sourceTree = "<group>"; };
+		EB39B8BF264D4945004E8D9C /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		EB748DA6264B2BA1002A375B /* LoodosFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB748DA9264B2BA1002A375B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB748DAB264B2BA1002A375B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +79,10 @@
 		EB748DCD264B2BA2002A375B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		EB748DE3264B3B8F002A375B /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		EB748DE5264B475F002A375B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB748DE8264B4C72002A375B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EB748DEA264B4C9A002A375B /* FirebaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
+		EB748DED264B514D002A375B /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D91359D96B89B2268543A6 /* Pods_LoodosFlix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114C25C0A4A7D50D1E94772C /* Pods_LoodosFlixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +106,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEF38DE758E975D2C56EAC6 /* Pods_LoodosFlix_LoodosFlixUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1843140DE1D9F5A7C2D565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7803C8FD8139D5921244A0B8 /* Pods_LoodosFlix.framework */,
+				D587E89D8192F8C4A79CE82B /* Pods_LoodosFlix_LoodosFlixUITests.framework */,
+				47C7A660B950065FF6DF196B /* Pods_LoodosFlixTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5737342B5B41283E4B4F05D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8389ED79726A0F67D3C02724 /* Pods-LoodosFlix.debug.xcconfig */,
+				0492E6206EB580199E30FBF2 /* Pods-LoodosFlix.release.xcconfig */,
+				A952EBEBAF6C171B7F30626D /* Pods-LoodosFlix-LoodosFlixUITests.debug.xcconfig */,
+				D3D2AF2CE7072141D7022E95 /* Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig */,
+				ABCF57137B69FC9704AC3E5F /* Pods-LoodosFlixTests.debug.xcconfig */,
+				510ECE0D549DBCC6C8C6BECC /* Pods-LoodosFlixTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB39B8B2264D3BF1004E8D9C /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */,
+			);
+			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
+		EB39B8B3264D3CBB004E8D9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB39B8B4264D3CC6004E8D9C /* Movie.swift */,
+				EB39B8B6264D3DA2004E8D9C /* MovieDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EB748D9D264B2BA1002A375B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +160,8 @@
 				EB748DBF264B2BA2002A375B /* LoodosFlixTests */,
 				EB748DCA264B2BA2002A375B /* LoodosFlixUITests */,
 				EB748DA7264B2BA1002A375B /* Products */,
+				C5737342B5B41283E4B4F05D /* Pods */,
+				4D1843140DE1D9F5A7C2D565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +210,7 @@
 		EB748DD9264B2BB0002A375B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EB748DEC264B5094002A375B /* MovieList */,
 				EB748DE2264B3B6E002A375B /* LaunchScreen */,
 			);
 			path = Screens;
@@ -144,6 +222,7 @@
 				EB748DA9264B2BA1002A375B /* AppDelegate.swift */,
 				EB748DAB264B2BA1002A375B /* SceneDelegate.swift */,
 				EB748DB7264B2BA2002A375B /* Info.plist */,
+				EB748DE5264B475F002A375B /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -151,7 +230,10 @@
 		EB748DDB264B2BC9002A375B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				EB748DE0264B2FB2002A375B /* NetworkMonitor.swift */,
+				EB39B8B3264D3CBB004E8D9C /* Model */,
+				EB39B8B2264D3BF1004E8D9C /* NetworkMonitor */,
+				EB39B8B8264D3F17004E8D9C /* ServiceManager.swift */,
+				EB39B8BF264D4945004E8D9C /* Services.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -159,6 +241,7 @@
 		EB748DDC264B2C07002A375B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EB39B8BA264D40EA004E8D9C /* Codable+Alamofire.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +249,8 @@
 		EB748DDD264B2C11002A375B /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				EB748DE7264B4C65002A375B /* FirebaseConstant */,
+				EB748DE8264B4C72002A375B /* Constant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -187,6 +272,23 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		EB748DE7264B4C65002A375B /* FirebaseConstant */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DEA264B4C9A002A375B /* FirebaseConstant.swift */,
+			);
+			path = FirebaseConstant;
+			sourceTree = "<group>";
+		};
+		EB748DEC264B5094002A375B /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				EB748DED264B514D002A375B /* MovieListViewController.swift */,
+				EB39B8BC264D4751004E8D9C /* MovieLisrViewModel.swift */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB748DD0264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlix" */;
 			buildPhases = (
+				0394DCD0DA5050AFF77A1DF5 /* [CP] Check Pods Manifest.lock */,
 				EB748DA2264B2BA1002A375B /* Sources */,
 				EB748DA3264B2BA1002A375B /* Frameworks */,
 				EB748DA4264B2BA1002A375B /* Resources */,
+				02A439AFA67B3786BFC8C23B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +315,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB748DD3264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixTests" */;
 			buildPhases = (
+				959364401B026B273DEEEF2B /* [CP] Check Pods Manifest.lock */,
 				EB748DB8264B2BA2002A375B /* Sources */,
 				EB748DB9264B2BA2002A375B /* Frameworks */,
 				EB748DBA264B2BA2002A375B /* Resources */,
@@ -229,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB748DD6264B2BA2002A375B /* Build configuration list for PBXNativeTarget "LoodosFlixUITests" */;
 			buildPhases = (
+				492F83D91572428C66B795C5 /* [CP] Check Pods Manifest.lock */,
 				EB748DC3264B2BA2002A375B /* Sources */,
 				EB748DC4264B2BA2002A375B /* Frameworks */,
 				EB748DC5264B2BA2002A375B /* Resources */,
+				5847FA0687553F7C8F6AFA90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB748DE6264B475F002A375B /* GoogleService-Info.plist in Resources */,
 				EB748DB6264B2BA2002A375B /* LaunchScreen.storyboard in Resources */,
 				EB748DB3264B2BA2002A375B /* Assets.xcassets in Resources */,
 			);
@@ -311,16 +419,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02A439AFA67B3786BFC8C23B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix/Pods-LoodosFlix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix/Pods-LoodosFlix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix/Pods-LoodosFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0394DCD0DA5050AFF77A1DF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoodosFlix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		492F83D91572428C66B795C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoodosFlix-LoodosFlixUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5847FA0687553F7C8F6AFA90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoodosFlix-LoodosFlixUITests/Pods-LoodosFlix-LoodosFlixUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		959364401B026B273DEEEF2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoodosFlixTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB748DA2264B2BA1002A375B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EB748DAE264B2BA1002A375B /* ViewController.swift in Sources */,
+				EB39B8BD264D4751004E8D9C /* MovieLisrViewModel.swift in Sources */,
 				EB748DE4264B3B8F002A375B /* LaunchViewController.swift in Sources */,
+				EB39B8C0264D4945004E8D9C /* Services.swift in Sources */,
+				EB39B8B9264D3F17004E8D9C /* ServiceManager.swift in Sources */,
+				EB39B8B5264D3CC6004E8D9C /* Movie.swift in Sources */,
 				EB748DE1264B2FB2002A375B /* NetworkMonitor.swift in Sources */,
+				EB748DEE264B514D002A375B /* MovieListViewController.swift in Sources */,
+				EB748DEB264B4C9A002A375B /* FirebaseConstant.swift in Sources */,
 				EB748DAA264B2BA1002A375B /* AppDelegate.swift in Sources */,
+				EB39B8B7264D3DA2004E8D9C /* MovieDetail.swift in Sources */,
 				EB748DAC264B2BA1002A375B /* SceneDelegate.swift in Sources */,
+				EB748DE9264B4C72002A375B /* Constant.swift in Sources */,
+				EB39B8BB264D40EA004E8D9C /* Codable+Alamofire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +705,7 @@
 		};
 		EB748DD1264B2BA2002A375B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8389ED79726A0F67D3C02724 /* Pods-LoodosFlix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -504,6 +725,7 @@
 		};
 		EB748DD2264B2BA2002A375B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0492E6206EB580199E30FBF2 /* Pods-LoodosFlix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +745,7 @@
 		};
 		EB748DD4264B2BA2002A375B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCF57137B69FC9704AC3E5F /* Pods-LoodosFlixTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +768,7 @@
 		};
 		EB748DD5264B2BA2002A375B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510ECE0D549DBCC6C8C6BECC /* Pods-LoodosFlixTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,6 +791,7 @@
 		};
 		EB748DD7264B2BA2002A375B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A952EBEBAF6C171B7F30626D /* Pods-LoodosFlix-LoodosFlixUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +812,7 @@
 		};
 		EB748DD8264B2BA2002A375B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D2AF2CE7072141D7022E95 /* Pods-LoodosFlix-LoodosFlixUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
