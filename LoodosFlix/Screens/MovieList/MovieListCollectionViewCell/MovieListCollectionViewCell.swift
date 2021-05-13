@@ -116,8 +116,8 @@ class MovieListCollectionViewCell: UICollectionViewCell {
     
     private func configureCellContent() {
         guard let movie = self.movie else { return }
-        movieNameLabel.text = "Movie Name: " + movie.title
-        movieYearLabel.text = "Year: " + movie.year
+        movieNameLabel.text = movie.title
+        movieYearLabel.text = movie.year
         movieImage.kf.setImage(with: URL(string: movie.poster))
     }
 }

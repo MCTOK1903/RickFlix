@@ -20,10 +20,10 @@ class MovieListViewController: UIViewController {
     let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.searchBarStyle = .prominent
+        searchBar.searchBarStyle = .minimal
         searchBar.placeholder = " Search..."
         searchBar.sizeToFit()
-        searchBar.isTranslucent = false
+//        searchBar.isTranslucent = false
         return searchBar
     }()
     
@@ -51,6 +51,12 @@ class MovieListViewController: UIViewController {
         setUpUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     func setUpUI() {
         view.backgroundColor = .white
         
@@ -58,7 +64,7 @@ class MovieListViewController: UIViewController {
         view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
@@ -74,6 +80,7 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchKey = searchBar.text  {
+            searchBar.endEditing(true)
             viewModel.searchMovie(movieName: searchKey) { [weak self] movie in
                 guard let self = self, let movies = movie?.search else { return }
                 self.movieListProvider.update(movies: movies)
@@ -97,7 +104,12 @@ extension MovieListViewController: MovieListCollectionViewOutput {
         return view.bounds.height
     }
     
-    func onSelected(movie: Search) {
-        print(movie.imdbID)
+    func onSelected(movieID: String) {
+        viewModel.getMovieDetail(movieID: movieID) { movieDetail in
+            guard let movieDetail = movieDetail else { return }
+            self.navigationController?.pushViewController(MovieDetailViewController(movie: movieDetail), animated: true)
+        } onError: { error in
+            //alert
+        }
     }
 }

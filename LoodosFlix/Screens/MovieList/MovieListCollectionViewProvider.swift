@@ -11,7 +11,7 @@ protocol MovieListCollectionViewProtocol {
     func update(movies: [Search])
 }
 protocol MovieListCollectionViewOutput: AnyObject {
-    func onSelected(movie: Search)
+    func onSelected(movieID: String)
     func getHight() -> CGFloat
 }
 
@@ -35,7 +35,7 @@ final class MovieListCollectionViewProvider: NSObject {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.onSelected(movie: movies[indexPath.item])
+        delegate?.onSelected(movieID: movies[indexPath.item].imdbID)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
