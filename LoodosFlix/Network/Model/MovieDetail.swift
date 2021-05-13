@@ -7,13 +7,13 @@
 
 // MARK: - MovieDetail
 struct MovieDetail: Codable {
-    let title, year, rated, released: String?
-    let runtime, genre, director, writer: String?
-    let actors, plot, language, country: String?
-    let awards: String?
-    let poster: String?
-    let imdbRating, imdbVotes, imdbID, type: String?
-    let response: String?
+    let title, year, rated, released: String
+    let runtime, genre, director, writer: String
+    let actors, plot, language, country: String
+    let awards: String
+    let poster: String
+    let imdbRating, imdbVotes, imdbID, type: String
+    let response: String
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
