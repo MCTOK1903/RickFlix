@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import Firebase
 
 protocol MovielistProtocol {
     func searchMovie(movieName:String, onSuccess: @escaping (Movie?) -> Void, onError: @escaping (AFError) -> Void)
@@ -38,13 +39,21 @@ extension MovieListViewModel {
     }
     
     func getMovieDetail(movieID: String, onSuccess: @escaping (MovieDetail?) -> Void, onError: @escaping (AFError) -> Void) {
-        service.getMovieDetail(movieID: movieID) { movieDetail in
-            guard let movieDetai = movieDetail else {
+        service.getMovieDetail(movieID: movieID) { [weak self] movieDetail in
+            guard let self =  self, let movieDetail = movieDetail else {
                 onSuccess(nil)
                 return }
-            onSuccess(movieDetai)
+            self.logDetailScreenEvent(movieTitle: movieDetail.title)
+            onSuccess(movieDetail)
         } onError: { error in
             onError(error)
         }
+    }
+    
+    private func logDetailScreenEvent(movieTitle: String) {
+        FirebaseAnalytics.Analytics.logEvent("detail_screen_viewed", parameters: [
+            AnalyticsParameterScreenName: "product_detail_view",
+            "product_name": movieTitle,
+        ])
     }
 }

@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
+  - Firebase/Analytics (7.4.0):
+    - Firebase/Core
   - Firebase/Core (7.4.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 7.4.0)
@@ -76,6 +78,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Firebase/Analytics
   - Firebase/Core
   - Firebase/RemoteConfig
   - Kingfisher (~> 6.0)
@@ -113,6 +116,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 00832d03dc32437e720f79ddd5ff4c7d459f9bf6
+PODFILE CHECKSUM: aad1d36b493e74716745bd90a76a36b6b195f430
 
 COCOAPODS: 1.10.0

@@ -10,6 +10,7 @@ target 'LoodosFlix' do
  pod 'Firebase/Core'
  pod 'Firebase/RemoteConfig' 
  pod 'Alamofire', '~> 5.2'
+ pod 'Firebase/Analytics'
  pod 'Kingfisher', '~> 6.0'
 
   target 'LoodosFlixTests' do
